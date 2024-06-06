@@ -1,17 +1,3 @@
-mixin QuickRunner {
-  void runQuick() {
-    print("Runnnnnnnnnn!!!!!!");
-  }
-}
-
-mixin Strong {
-  final double strengthLevel = 1500.99;
-}
-
-mixin Tall {
-  final double height = 1.99;
-}
-
 class Human {
   final String name;
   Human({required this.name});
@@ -22,7 +8,7 @@ class Human {
 
 enum Team { blue, red }
 
-class Player extends Human with QuickRunner, Strong, Tall {
+class Player extends Human {
   final Team team;
 
   Player({required this.team, required String name}) : super(name: name);
@@ -34,10 +20,7 @@ class Player extends Human with QuickRunner, Strong, Tall {
   }
 }
 
-class Horse with Strong, QuickRunner {}
-
 void main() {
   var player = Player(team: Team.red, name: 'nico');
   player.sayHello();
-  player.runQuick();
 }
