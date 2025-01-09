@@ -25,7 +25,8 @@ class Player {
         this.xp = 0;
 
   void sayHello() {
-    print("Hi, my name is $name. ");
+    print(
+        "Hi, my name is $name and I'm $age years old. I'm in $team team with $xp points.  ");
   }
 }
 
